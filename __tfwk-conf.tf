@@ -3,7 +3,7 @@
 ############################################
 terraform {
   cloud {
-    organization = "schan-mz"
+    organization = "schan-test"
 
     workspaces {}
   }
