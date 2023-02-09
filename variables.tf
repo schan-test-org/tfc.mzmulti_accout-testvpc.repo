@@ -1,11 +1,12 @@
 ############################# main : var #######################################
 
-variable "nik1_access_key" {}
-variable "nik1_secret_key" {}
-# variable "nik2_access_key" {}
-# variable "nik2_secret_key" {} 
+variable "dev_access_key" {}
+variable "dev_secret_key" {}
 
-variable "tf_workspace" {}
+variable "qa_access_key" {}
+variable "qa_secret_key" {}
+
+# variable "tf_workspace" {}
 
 variable "env" { type = string }
 # variable "aws_profile" { type = string }

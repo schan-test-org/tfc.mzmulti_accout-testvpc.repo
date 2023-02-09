@@ -1,8 +1,23 @@
+
+
+############################################
+# AWS Provider Configuration
+############################################
+provider "aws" {
+  region  = var.aws_region
+  # profile = var.aws_profile
+  access_key = var.dev_access_key
+  secret_key = var.dev_secret_key
+
+  ignore_tags {
+    key_prefixes = ["kubernetes.io", "k8s.io"]
+  }
+}
+
 ########################################
 # Common
 ########################################
-
-project     = "mz-vpc1-prj"
+project     = "mzdev-vpc-prj"
 aws_region  = "ap-northeast-2"
 
 
@@ -14,7 +29,7 @@ default_tags = {
 ########################################
 # wsk setting
 ########################################
-env = "mz1-dev-vpc"
+env = "mzdev-vpc"
 
 ########################################
 # conditions
@@ -27,6 +42,6 @@ instance_tenancy     = "default"
 ########################################
 # VPC A-class
 ########################################
-vpc_cidr = "10.1.0.0/16"
+vpc_cidr = "10.10.0.0/16"
 vpc_id   = ""
 
