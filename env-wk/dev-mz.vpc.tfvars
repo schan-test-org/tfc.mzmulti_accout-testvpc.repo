@@ -25,6 +25,7 @@ enable_dns_support   = true
 instance_tenancy     = "default"
 
 
+
 ########################################
 # VPC A-class
 ########################################
