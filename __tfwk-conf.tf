@@ -20,3 +20,18 @@ terraform {
 #     }
 #   }
 # }
+
+############################################
+# AWS Provider Configuration
+############################################
+provider "aws" {
+  region  = var.aws_region
+  # profile = var.aws_profile
+  access_key = var.dev_access_key
+  secret_key = var.dev_secret_key
+
+  ignore_tags {
+    key_prefixes = ["kubernetes.io", "k8s.io"]
+  }
+
+}
