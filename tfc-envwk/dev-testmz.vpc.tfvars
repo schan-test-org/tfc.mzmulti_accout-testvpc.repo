@@ -7,8 +7,7 @@ aws_region  = "ap-northeast-2"
 
 
 default_tags = {
-  dept  = "Platform Service Architect Group / DevOps SWAT Team"
-  email = "schan@mz.co.kr"
+  dept  = "DEVOPS/TERRAFORM-CLOUD-GITOPS-TESTING"
 }
 
 ########################################
