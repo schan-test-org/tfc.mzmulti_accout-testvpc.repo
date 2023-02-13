@@ -2,7 +2,7 @@
 ########################################
 # Common
 ########################################
-project     = "dev-mz-vpc-prj"
+project     = "dev-eks-prj"
 aws_region  = "ap-northeast-2"
 
 
