@@ -1,17 +1,17 @@
 
-############################# vpc-igw : local #####################################
+############################# local : vpc-igw  #####################################
 locals {
   create_vpc = var.vpc_id == "" ? true : false
   create_igw = local.create_vpc
 
-  vpc_name = format("%s-eks", var.env)
+  vpc_name = format("%s-vpc-eks", var.env)
   vpc_id   = local.create_vpc ? aws_vpc.vpc[0].id : var.vpc_id
 
-  igw_name = format("%s-eks-igw", var.env)
+  igw_name = format("%s-vpc-eks-igw", var.env)
 
 }
 
-############################# vpc-igw : resource ##################################
+############################# resource: vpc-igw  ##################################
 
 resource "aws_vpc" "vpc" {
   count = local.create_vpc ? 1 : 0
@@ -32,23 +32,7 @@ resource "aws_internet_gateway" "igw" {
   depends_on = [aws_vpc.vpc]
 }
 
-# ############################# vpc-igw : data ##################################
-# data "aws_vpc" "vpc" {
-#   id = local.vpc_id
-#   depends_on = [aws_vpc.vpc]
-# }
-
-# data "aws_internet_gateway" "igw" {
-#   # count = local.create_igw ? 0 : 1
-
-#   filter {
-#     name   = "attachment.vpc-id"
-#     values = [local.vpc_id]
-#   }
-#   depends_on = [aws_vpc.vpc, aws_internet_gateway.igw]
-# }
-
-############################# vpc-igw : output ##################################
+############################# output : vpc-igw  ##################################
 
 output "vpc_id" {
   value = local.vpc_id

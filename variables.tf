@@ -1,10 +1,10 @@
 ############################# main : var #######################################
 
-variable "dev_access_key" {}
-variable "dev_secret_key" {}
+# variable "dev_access_key" {}
+# variable "dev_secret_key" {}
 
-variable "qa_access_key" {}
-variable "qa_secret_key" {}
+# variable "qa_access_key" {}
+# variable "qa_secret_key" {}
 
 # variable "tf_workspace" {}
 

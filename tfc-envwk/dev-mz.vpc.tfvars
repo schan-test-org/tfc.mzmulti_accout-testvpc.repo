@@ -2,7 +2,7 @@
 ########################################
 # Common
 ########################################
-project     = "mzdev-vpc-prj"
+project     = "dev-mz-vpc-prj"
 aws_region  = "ap-northeast-2"
 
 
@@ -29,6 +29,6 @@ instance_tenancy     = "default"
 ########################################
 # VPC A-class
 ########################################
-vpc_cidr = "10.11.0.0/16"
+vpc_cidr = "10.30.0.0/16"
 vpc_id   = ""
 
